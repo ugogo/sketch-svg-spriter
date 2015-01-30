@@ -1,0 +1,25 @@
+{
+  "name": "Sketch-SVG-Spriter",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onaliugo/Sketch-SVG-Spriter.git"
+  },
+  "keywords": [
+    "sketch",
+    "svg",
+    "export",
+    "sprite"
+  ],
+  "author": "Ugo Onali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onaliugo/Sketch-SVG-Spriter/issues"
+  },
+  "homepage": "https://github.com/onaliugo/Sketch-SVG-Spriter"
+}
