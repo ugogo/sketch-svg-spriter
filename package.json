@@ -25,6 +25,6 @@
   "dependencies": {
     "exec-sync": "^0.1.6",
     "svgo": "^0.5.0",
-    "uo-node-utils": "0.0.30"
+    "uo-node-utils": "0.0.41"
   }
 }
