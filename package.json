@@ -1,6 +1,6 @@
 {
-  "name": "Sketch-SVG-Spriter",
-  "version": "0.0.1",
+  "name": "sketch-svg-spriter",
+  "version": "0.0.11",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
