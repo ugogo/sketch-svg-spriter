@@ -1,7 +1,9 @@
 var SVGSpriter = require('./lib/index');
 
-Spriter.generate({
+var Spriter = new SVGSpriter({
 	file: 'icons.sketch',
 	dist: 'assets/',
-	spaceBetweenSVG: 20
-});
+	padding: 20
+})
+
+Spriter.generate();
