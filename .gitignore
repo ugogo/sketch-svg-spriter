@@ -1,3 +1,4 @@
-example/dist
+dist/
+
 example/index.html
 *.sketch

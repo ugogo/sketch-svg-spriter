@@ -27,6 +27,6 @@
     "extend": "^2.0.0",
     "svgo": "^0.5.0",
     "underscore": "^1.7.0",
-    "uo-node-utils": "0.0.41"
+    "uo-node-utils": "0.1.1"
   }
 }
