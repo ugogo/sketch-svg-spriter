@@ -2,5 +2,5 @@
 	display: inline-block;
 	width: <%= sizes.width %>px;
 	height: <%= sizes.height %>px;
-	background: url('icons/sprite.svg') -<%= position.x %>px 0;
+	background: url('icons/sprite.svg') -<%= positions.x %>px 0;
 }
