@@ -9,6 +9,6 @@ module.exports = {
 	},
 	css: {
 		template: 'example/assets/template.css',
-		dist: 'example/dist/icons.css'
+		dist: 'dist/icons.css'
 	}
 };

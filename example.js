@@ -13,6 +13,5 @@ var Spriter = new SVGSpriter({
 		template: 'example/assets/template.css',
 		dist: 'dist/icons.css'
 	}
-});
-
-Spriter.generate();
+})
+.generate();

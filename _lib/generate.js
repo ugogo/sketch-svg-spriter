@@ -5,16 +5,21 @@
  * Update wrapper content and size
  * Compile CSS template */
 
+var fs = require('fs');
 var Utils = require('uo-node-utils');
+var exec_sync = require('exec-sync');
+var svgicons2svgfont = require('svgicons2svgfont');
 var Attrs = require('./tools/svg-attrs');
+var CssManager = require('./managers/css');
 
 module.exports = function () {
-  if (!this.opts.canContinue)
+  if (!this._opts.canContinue)
     return;
-
+return console.log(this.opts);
+  var Css = this._opts.Css ? new CssManager(this.opts.css.template) : {};
   var self = this;
   var files = this.exportSvg();
-  var keepSingle = self.opts.svg.keepSingle;
+  var keepSingle = this.opts.svg.keepSingle;
 
   Utils.create.folder(this.opts.file.dist);
 
@@ -37,11 +42,14 @@ module.exports = function () {
     Wrapper.updateContent(content);
     Wrapper.updateSizes(attrs.position.x + attrs.sizes.width, attrs.sizes.height);
 
-    CssManager.compile(attrs);
+    Css.compile(attrs);
   });
 
   Utils.create.file(this.opts.file.dist + 'sprite.svg', Wrapper.build());
-  Utils.create.file(this.opts.css.dist, CssManager.build());
+  Utils.create.file(this.opts.css.dist, Css.build());
+
+  exec_sync('svgicons2svgfont ' + this.opts.assets + ' dist/test.svg');
+  console.log('> SVG font created');
 
   if (!keepSingle) {
     Utils.silent = true;
