@@ -15,7 +15,7 @@ var CssManager = require('./managers/css');
 module.exports = function () {
   if (!this._opts.canContinue)
     return;
-return console.log(this.opts);
+
   var Css = this._opts.Css ? new CssManager(this.opts.css.template) : {};
   var self = this;
   var files = this.exportSvg();
