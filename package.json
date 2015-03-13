@@ -22,11 +22,12 @@
     "url": "https://github.com/onaliugo/Sketch-SVG-Spriter/issues"
   },
   "homepage": "https://github.com/onaliugo/Sketch-SVG-Spriter",
-  "dependencies": {
+  "devDependencies": {
     "exec-sync": "^0.1.6",
     "extend": "^2.0.0",
+    "svgicons2svgfont": "^1.0.0",
     "svgo": "^0.5.0",
     "underscore": "^1.7.0",
-    "uo-node-utils": "0.1.1"
+    "uo-node-utils": "^0.1.1"
   }
 }

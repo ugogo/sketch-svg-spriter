@@ -1,18 +1,16 @@
 var SVGSpriter = require('./lib/index');
 
 var Spriter = new SVGSpriter({
-	file: {
+	files: {
 		sketch: 'example/src/icons-solid.sketch',
-		dist: 'dist'
+		dist: 'icons'
 	},
 	svg: {
-		keepSingle: true,
 		padding: 20
 	},
 	css: {
 		template: 'example/assets/template.css',
-		dist: 'dist/icons.css'
+		dist: 'icons/icons.css'
 	}
-});
-
-Spriter.generate();
+})
+.generate();
