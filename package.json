@@ -1,6 +1,6 @@
 {
   "name": "sketch-svg-spriter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "url": "https://github.com/onaliugo/Sketch-SVG-Spriter/issues"
   },
   "homepage": "https://github.com/onaliugo/Sketch-SVG-Spriter",
-  "devDependencies": {
+  "dependencies": {
     "exec-sync": "^0.1.6",
     "extend": "^2.0.0",
     "svg2png": "^1.1.0",
