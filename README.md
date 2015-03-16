@@ -25,7 +25,8 @@ var Spriter = new SVGSpriter({
 	css: {
 		template: 'example/assets/template.css',
 		dist: 'icons/icons.css'
-	}
+	},
+	png: true
 })
 .generate();
 
@@ -67,7 +68,7 @@ var defaultOpts = {
 		keepSingle: true,
 	},
 
-  /* css {}
+  /* css: obj || false
 
    * css.template: 'string'
    * path to your css template
@@ -86,7 +87,13 @@ var defaultOpts = {
    * -> uo-node-utils package
    */
 
-	silent: false
+	silent: false,
+
+  /* png: boolean
+   * convert svg's sprite to .png
+   */
+
+	png: false
 };
 ```
 

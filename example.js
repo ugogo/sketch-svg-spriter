@@ -11,6 +11,7 @@ var Spriter = new SVGSpriter({
 	css: {
 		template: 'example/assets/template.css',
 		dist: 'icons/icons.css'
-	}
+	},
+	png: true
 })
 .generate();
