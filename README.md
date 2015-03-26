@@ -93,7 +93,13 @@ var defaultOpts = {
    * convert svg's sprite to .png
    */
 
-	png: false
+	png: false,
+
+	/* cacheBusting: boolean
+	 * add a timestamp on each url matching the sprite path
+	 */
+
+	cacheBusting: true
 };
 ```
 

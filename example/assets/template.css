@@ -4,3 +4,7 @@
 	height: <%= sizes.height %>px;
 	background: url('icons/sprite.svg') -<%= positions.x %>px 0;
 }
+
+.lt-ie9 .icon.icon--<%= name %> {
+	background: url('icons/sprite.png') -<%= positions.x %>px 0;
+}
