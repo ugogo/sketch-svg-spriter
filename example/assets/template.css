@@ -1,10 +1,15 @@
-.icon.icon--<%= name %> {
-	display: inline-block;
-	width: <%= sizes.width %>px;
-	height: <%= sizes.height %>px;
-	background: url('icons/sprite.svg') -<%= positions.x %>px 0;
+.icon {
+	background-image: url('<%= spritePath %>.svg');
 }
 
-.lt-ie9 .icon.icon--<%= name %> {
-	background: url('icons/sprite.png') -<%= positions.x %>px 0;
+.lt-ie9 {
+	background-image: url('<%= spritePath %>.png');
 }
+
+<% _.each(icons, function (icon, i) { %>
+	.icon.icon--<%= icon.name %> {
+		width: <%= icon.sizes.width %>px;
+		height: <%= icon.sizes.height %>px;
+		background-position: -<%= icon.positions.x %>px <%= icon.positions.y %>;
+	}
+<% }); %>
