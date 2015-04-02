@@ -95,9 +95,11 @@ var defaultOpts = {
 
 	png: false,
 
-	/* cacheBusting: boolean
-	 * add a timestamp on each url matching the sprite path
+	/* clearBeforeGenerate: boolean
+	 * clear dist folder before launching generate
 	 */
+
+	clearBeforeGenerate: true,
 
 	cacheBusting: true
 };

@@ -6,7 +6,8 @@ var Spriter = new SVGSpriter({
 		dist: 'icons'
 	},
 	svg: {
-		padding: 20
+		padding: 20,
+		keepSingle: false
 	},
 	css: {
 		template: 'example/assets/template.css',
