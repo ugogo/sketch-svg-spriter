@@ -16,15 +16,15 @@ var SVGSpriter = require('sketch-svg-spriter');
 
 var Spriter = new SVGSpriter({
 	files: {
-		sketch: 'example/src/icons-solid.sketch',
-		dist: 'icons'
+		sketch: 'src/icons.sketch',
+		dist: 'dist/icons/'
 	},
 	svg: {
 		padding: 20
 	},
 	css: {
-		template: 'example/assets/template.css',
-		dist: 'icons/icons.css'
+		template: 'src/scss/icons/template.css',
+		dist: 'dist/css/icons.css'
 	},
 	png: true
 })
@@ -34,77 +34,108 @@ var Spriter = new SVGSpriter({
 
 
 
-## Default options
+## Options
+
+### files: `object`
+
+#### files.src: `string`
+path to your Sketch file
+
+#### files.dis*: `string`
+where your svgs will be output
 
 ```js
-var defaultOpts = {
-
-  /* files {}
-
-   * files.src: 'string'
-   * path to your Sketch file
-
-   * files.dist: 'string'
-   * where your files will be output
-   */
-
+var opts = {
 	files: {
 		src: 'example/src/icons.sketch',
-		dist: 'dist',
-	},
-
-  /* svg {}
-
-   * svg.padding: number
-   * space between your icons in sprite
-
-   * components.keepSingle: boolean'
-   * before the sprite is generated, each icon is exporter has .svg file
-   * if you want to keep them, set keepSingle to `true`
-   */
-
-	svg: {
-	  padding: 0,
-		keepSingle: true,
-	},
-
-  /* css: obj || false
-
-   * css.template: 'string'
-   * path to your css template
-
-   * css.dist: 'string'
-   * where your css will be output
-   */
-
-  css: {
-    template: 'example/assets/template.css',
-    dist: 'dist/icons/css'
-  },
-
-  /* silent: boolean
-   * log a message when action is done
-   * -> uo-node-utils package
-   */
-
-	silent: false,
-
-  /* png: boolean
-   * convert svg's sprite to .png
-   */
-
-	png: false,
-
-	/* clearBeforeGenerate: boolean
-	 * clear dist folder before launching generate
-	 */
-
-	clearBeforeGenerate: true,
-
-	cacheBusting: true
+		dist: 'example/dist/imgs/svg',
+	}
 };
 ```
 
+---
+
+### svg: `object`
+
+#### svg.padding: `number`
+space between svgs in sprite
+
+#### svg.keepSingle: `boolean`
+before the sprite is generated, each icon is exporter has .svg file,
+set keepSingle to `true` to keep them
+
+```js
+var opts = {
+	svg: {
+		padding: 0,
+		keepSingle: false
+	}
+};
+```
+
+---
+
+### css: `object` or `false`
+
+#### css.template: `string`
+path to your css template
+
+#### css.dist: `string`
+where your css will be output
+
+```js
+var opts = {
+	css: {
+		template: 'example/assets/template.css',
+		dist: 'dist/css/icons.css'
+	}
+};
+```
+
+---
+
+### png: `boolean`
+generate a png fallback of the sprite
+
+```js
+var opts = {
+	png: true
+};
+```
+
+---
+
+### clearBeforeGenerate: `boolean`
+clear dist folder (`files.dist`) before generate svgs
+
+```js
+var opts = {
+	clearBeforeGenerate: true
+};
+```
+
+---
+
+### silent: `boolean`
+log a message when action is done
+
+```js
+var opts = {
+	silent: false
+};
+```
+
+---
+
+### cacheBusting: `boolean`
+
+```js
+var opts = {
+	cacheBusting: false
+};
+```
+
+---
 
 # The MIT License (MIT)
 
