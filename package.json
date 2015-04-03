@@ -1,7 +1,7 @@
 {
   "name": "sketch-svg-spriter",
   "version": "0.4.0",
-  "description": "",
+  "description": "Generate a SVG sprite from your Sketch file",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
