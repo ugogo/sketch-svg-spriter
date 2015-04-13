@@ -1,15 +1,15 @@
 .icon {
-	background-image: url('<%= spritePath %>.svg');
+	background-image: url('<%= spritePath %>-<%= timestamp %>.svg');
 }
 
 .lt-ie9 {
-	background-image: url('<%= spritePath %>.png');
+	background-image: url('<%= spritePath %>-<%= timestamp %>.png');
 }
 
 <% _.each(icons, function (icon, i) { %>
-	.icon.icon--<%= icon.name %> {
-		width: <%= icon.sizes.width %>px;
-		height: <%= icon.sizes.height %>px;
-		background-position: -<%= icon.positions.x %>px <%= icon.positions.y %>;
-	}
+.icon.icon--<%= icon.name %> {
+	width: <%= icon.sizes.width %>px;
+	height: <%= icon.sizes.height %>px;
+	background-position: -<%= icon.positions.x %>px <%= icon.positions.y %>;
+}
 <% }); %>
