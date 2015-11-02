@@ -1,13 +1,16 @@
-.icon {
-	background-image: url('<%= spritePath %>-<%= timestamp %>.svg');
+.Icon {
+	background-image: url('<%= fileName %><%= cacheBusting ? "-" + timestamp : "" %>.svg');
 }
 
-.lt-ie9 {
-	background-image: url('<%= spritePath %>-<%= timestamp %>.png');
+<% if (png) { %>
+.lt-ie9 .Icon {
+	background-image: url('<%= fileName %><%= cacheBusting ? "-" + timestamp : "" %>.png');
 }
+<% } %>
 
 <% _.each(icons, function (icon, i) { %>
-.icon.icon--<%= icon.name %> {
+.<%= className %>.<%= className %>--<%= icon.name %> {
+	display: inline-block;
 	width: <%= icon.sizes.width %>px;
 	height: <%= icon.sizes.height %>px;
 	background-position: -<%= icon.positions.x %>px <%= icon.positions.y %>;

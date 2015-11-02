@@ -44,11 +44,15 @@ path to your Sketch file
 #### files.dis*: `string`
 where your svgs will be output
 
+#### files.name: `string`
+filename of your sprite
+
 ```js
 var opts = {
 	files: {
 		src: 'example/src/icons.sketch',
 		dist: 'example/dist/imgs/svg',
+		name: 'sprite',
 	}
 };
 ```
@@ -83,11 +87,15 @@ path to your css template
 #### css.dist: `string`
 where your css will be output
 
+#### css.className: `string`
+classname of sprite items
+
 ```js
 var opts = {
 	css: {
 		template: 'example/assets/template.css',
-		dist: 'dist/css/icons.css'
+		dist: 'dist/css/icons.css',
+		className: 'Icon'
 	}
 };
 ```
